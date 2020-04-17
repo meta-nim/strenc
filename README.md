@@ -1,5 +1,5 @@
 # nim-strenc
-This is a Nim library for automatically encrypting (currently via XOR with a different key for each string generated at compile-time) string literals.
+This is a Nim library for automatic encryption (currently via XOR with a different key for each string generated at compile-time) of string literals.
 You can install it from Nimble via
 ```sh
 nimble install strenc
