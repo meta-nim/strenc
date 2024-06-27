@@ -23,6 +23,7 @@ var encodedCounter {.compileTime.} = hash(CompileTime & CompileDate) and 0x7FFFF
 # Use a term-rewriting macro to change all string literals
 macro encrypt*{s}(s: string{lit}): untyped =
   var encodedStr = gkkaekgaEE(estring($s), encodedCounter)
-  result = quote do:
-    gkkaekgaEE(estring(`encodedStr`), `encodedCounter`)
+  {.noRewrite.}:
+    result = quote do:
+      gkkaekgaEE(estring(`encodedStr`), `encodedCounter`)
   encodedCounter = (encodedCounter *% 16777619) and 0x7FFFFFFF
