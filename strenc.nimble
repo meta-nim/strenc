@@ -1,7 +1,7 @@
 # Package
 
-version       = "0.1.0"
-author        = "Danil Yarantsev (Yardanico)"
+version       = "0.1.1"
+author        = "Danil Yarantsev (Yardanico), lit (litlighilit)"
 description   = "A library to automatically encrypt all string constants in your programs"
 license       = "MIT"
 srcDir        = "src"
